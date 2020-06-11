@@ -1,0 +1,4 @@
+node -v -> to check node version
+
+node 	-> access to the node terminal environment 
+node <file-name.js> -> Tp execute a file on node.js terminal  
