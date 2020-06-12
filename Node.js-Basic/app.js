@@ -17,6 +17,13 @@ const http = require('http');
 // (ES6)
 const server = http.createServer((req,res)=>{
     console.log(req);
+
+    //exit the event loop
+    /*
+        exit event loop likes a we destroy the whole nodejs process. 
+        DONT DO THIS -just learn :D
+    */
+    process.exit()
 });
 
 //keep this running and listen to the income req -> .listen()
