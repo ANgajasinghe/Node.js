@@ -1,35 +1,23 @@
 //import packages
-/*
-    you can import your packages too : require(./relative-path ) :- .js not required in the end i will automaticaly added by node
-*/
 const http = require('http');
 
-// function requestListener(req,res){}
-// http.createServer(requestListener)
-
-//--- create a server using event driven architecture 
-
-// (ES5)
-// http.createServer(function(req,res){
-
-// });
-
-// (ES6)
 const server = http.createServer((req,res)=>{
-    console.log(req);
+    console.log(req.url , req.headers , req.method);
 
-    //exit the event loop
-    /*
-        exit event loop likes a we destroy the whole nodejs process. 
-        DONT DO THIS -just learn :D
-    */
-    process.exit()
+    res.setHeader('Content-Type','text/html');
+    res.write('<html>');
+    res.write('<body> This is a response </body>');
+    res.write('</html>');
+
+    //end -DONT WRITE AFTER  res.end();
+    res.end();
+
+    
+
 });
 
-//keep this running and listen to the income req -> .listen()
+
 server.listen(3800);
+
 // to check -> http://localhost:3800/
 
-/*
-    Server was created -D
-*/
