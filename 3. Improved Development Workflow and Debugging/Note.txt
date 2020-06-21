@@ -1,0 +1,7 @@
+npm ini 
+    this will give you to freedome to use Node node packages inside this application 
+    When you implementing this command there have a some quection 
+
+    Finaly you can get package.json file 
+
+    
